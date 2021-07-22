@@ -7,4 +7,8 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 16px;
     font-family: 'Nunito', sans-serif;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;

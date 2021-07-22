@@ -8,5 +8,8 @@ declare module "styled-components" {
     iconSize: {
       [key: string]: number;
     };
+    colour: {
+      [key: string]: string;
+    };
   }
 }

@@ -9,4 +9,5 @@ export const theme: DefaultTheme = {
     sm: 0,
     md: 900,
   },
+  colour: {},
 };
