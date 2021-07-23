@@ -1,11 +1,14 @@
 import React from 'react';
-import {Header} from './components/Header';
+import { Container } from 'react-awesome-styled-grid';
+import { Header } from './components/Header';
+import { Navigation } from './components/Navigation';
 
 const Home = () => {
   return (
-    <div>
+    <Container>
       <Header />
-    </div>
+      <Navigation />
+    </Container>
   );
 }
 
