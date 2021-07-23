@@ -2,6 +2,14 @@ import "styled-components";
 
 declare module "styled-components" {
   export interface DefaultTheme {
+    awesomegrid: {
+      columns: {
+        [key: string]: number;
+      };
+      breakpoints: {
+        [key: string]: number;
+      };
+    };
     breakpoint: {
       [key: string]: number;
     };
