@@ -1,5 +1,5 @@
-import { DieFive } from "@styled-icons/foundation";
 import React, { FunctionComponent } from "react";
+import { Col } from "react-awesome-styled-grid";
 import styled from "styled-components";
 
 export enum Route {
@@ -12,11 +12,20 @@ export enum Route {
 };
 
 interface NavigationProps {
-  activeSection: Route;
+  activeSection?: Route;
 };
 
-const NavigationWrapper = styled.nav`
-
+const NavigationWrapper = styled(Col).attrs({
+  as: "nav",
+  xs: 6,
+  sm: 3,
+  md: 3,
+  lg: 3
+})`
+  outline: 1px solid red;
 `;
 
-export const Navigation: FunctionComponent<NavigationProps> = ({activeSection}) => (<div />);
+export const Navigation: FunctionComponent<NavigationProps> = ({ activeSection }) => {
+
+  return (<NavigationWrapper>Nav</NavigationWrapper>);
+}
