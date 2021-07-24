@@ -8,7 +8,7 @@ const HEADER_IMAGE = "https://images.unsplash.com/photo-1523881542461-305ab56693
 const MastheadWrapper = styled.div`
   width: 100vw;
   height: 580px;
-  padding-top: calc(${HEADER_HEIGHT} + 1rem);
+  padding-top: ${HEADER_HEIGHT};
   position: relative;
 
   &::after {

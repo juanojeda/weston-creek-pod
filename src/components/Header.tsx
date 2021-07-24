@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import { Telephone } from '@styled-icons/foundation';
 import { getBreakpoint } from '../utils/themeHelpers';
 
-export const HEADER_HEIGHT = "7rem";
+export const HEADER_HEIGHT = "8rem";
+const INTERNAL_HEADER_HEIGHT = "7rem";
 
 const Wrapper = styled.header`
   display: flex;
   gap: .5rem;
-  height: ${HEADER_HEIGHT};
+  height: ${INTERNAL_HEADER_HEIGHT};
   justify-content: space-between;
   padding-bottom: .5rem;
   padding-top: .5rem;
