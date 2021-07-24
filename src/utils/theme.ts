@@ -30,7 +30,7 @@ export const theme: DefaultTheme = {
   colour: {
     primary: "teal",
     secondary: "darkTeal",
-    foreground: "darkGrey",
-    background: "offWhite"
+    foreground: "black",
+    background: "white"
   }
 };
