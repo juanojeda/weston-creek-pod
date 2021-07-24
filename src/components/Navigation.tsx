@@ -3,12 +3,11 @@ import { Col } from "react-awesome-styled-grid";
 import styled, { css } from "styled-components";
 
 export enum Route {
-  HOME = "#home",
-  OUR_TEAM = "#our-team",
-  SERVICES = "#services",
-  FAQS = "#faqs",
-  BOOKINGS = "//google.com",
-  CONTACT = "#contact",
+  HOME = "home",
+  OUR_TEAM = "our-team",
+  SERVICES = "services",
+  FAQS = "faqs",
+  CONTACT = "contact",
 };
 
 interface NavigationProps {
@@ -36,6 +35,9 @@ const NavigationWrapper = styled(Col).attrs({
   background: ${({ theme }) => theme.colour.primary};
   border-radius: 5px;
   padding: 1.5rem 0 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 `;
 
 const Link = styled.a <LinkProps>`
@@ -65,12 +67,12 @@ const Link = styled.a <LinkProps>`
 export const Navigation: FunctionComponent<NavigationProps> = ({ activeSection }) => {
 
   const links: LinkConfig[] = [
-    { href: Route.HOME, text: "Home" },
-    { href: Route.OUR_TEAM, text: "Our team" },
-    { href: Route.SERVICES, text: "Services" },
-    { href: Route.FAQS, text: "FAQs" },
+    { href: `#${Route.HOME}`, text: "Home" },
+    { href: `#${Route.OUR_TEAM}`, text: "Our team" },
+    { href: `#${Route.SERVICES}`, text: "Services" },
+    { href: `#${Route.FAQS}`, text: "FAQs" },
     { href: "//google.com", text: "Bookings", isExternal: true },
-    { href: Route.CONTACT, text: "Contact us" },
+    { href: `#${Route.CONTACT}`, text: "Contact us" },
   ];
 
   return (

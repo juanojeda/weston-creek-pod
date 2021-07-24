@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'react-awesome-styled-grid';
 import { Header } from './components/Header';
 import { Navigation } from './components/Navigation';
 import { ContactUs } from './sections/ContactUs';
@@ -10,7 +9,7 @@ import { Services } from './sections/Services';
 
 const Home = () => {
   return (
-    <Container>
+    <>
       <Header />
       <Navigation />
       <Masthead />
@@ -18,7 +17,7 @@ const Home = () => {
       <Services />
       <FAQs />
       <ContactUs />
-    </Container>
+    </>
   );
 }
 
