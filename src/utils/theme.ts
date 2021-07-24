@@ -29,7 +29,7 @@ export const theme: DefaultTheme = {
   },
   colour: {
     primary: "teal",
-    secondary: "darkTeal",
+    secondary: "darkslategrey",
     foreground: "black",
     background: "white"
   }

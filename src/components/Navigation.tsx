@@ -18,7 +18,6 @@ interface NavigationProps {
 
 interface LinkProps {
   readonly $external?: boolean;
-  readonly $active?: boolean
 };
 
 interface LinkConfig {
@@ -65,9 +64,10 @@ const NavLink = styled(Link) <LinkProps>`
     }
   `}
 
-  ${({ $active }) => $active && css`
+  &.active {
     font-weight: bold;
-  `};
+    background: ${({ theme }) => theme.colour.secondary};
+  };
 `;
 
 export const Navigation: FunctionComponent<NavigationProps> = ({ activeSection }) => {
