@@ -24,7 +24,7 @@ export const theme: DefaultTheme = {
     md: 4
   },
   breakpoint: {
-    sm: 0,
+    sm: 600,
     md: 900
   },
   colour: {

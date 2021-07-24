@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
-import { Col } from "react-awesome-styled-grid";
+import { Col, Container } from "react-awesome-styled-grid";
 import styled, { css } from "styled-components";
+import { HEADER_HEIGHT } from "./Header";
 
 export enum Route {
   HOME = "home",
@@ -25,19 +26,23 @@ interface LinkConfig {
   isExternal?: boolean;
 }
 
+const NavigationContainer = styled(Container)`
+  position: fixed;
+  top: calc(${HEADER_HEIGHT} + 1rem);
+  z-index: 1;
+`;
+
 const NavigationWrapper = styled(Col).attrs({
   as: "nav",
   xs: 6,
-  sm: 3,
+  sm: 2,
   md: 3,
   lg: 3
 })`
   background: ${({ theme }) => theme.colour.primary};
   border-radius: 5px;
   padding: 1.5rem 0 2rem;
-  position: fixed;
   width: 100%;
-  z-index: 1;
 `;
 
 const Link = styled.a <LinkProps>`
@@ -76,10 +81,12 @@ export const Navigation: FunctionComponent<NavigationProps> = ({ activeSection }
   ];
 
   return (
-    <NavigationWrapper>
-      {links.map(({ href, text, isExternal = false }) => (
-        <Link href={href} $external={isExternal}>{text}</Link>
-      ))}
-    </NavigationWrapper>
+    <NavigationContainer>
+      <NavigationWrapper>
+        {links.map(({ href, text, isExternal = false }) => (
+          <Link href={href} $external={isExternal}>{text}</Link>
+        ))}
+      </NavigationWrapper>
+    </NavigationContainer>
   );
 }

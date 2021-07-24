@@ -3,12 +3,17 @@ import styled from 'styled-components';
 import { Telephone } from '@styled-icons/foundation';
 import { getBreakpoint } from '../utils/themeHelpers';
 
+export const HEADER_HEIGHT = "7rem";
+
 const Wrapper = styled.header`
   display: flex;
   gap: .5rem;
+  height: ${HEADER_HEIGHT};
   justify-content: space-between;
   padding-bottom: .5rem;
   padding-top: .5rem;
+  position: fixed;
+  width: 100%;
 
   &::before {
     content: "";
@@ -62,7 +67,7 @@ interface HeaderProps {
   showPhone?: boolean;
 }
 
-export const Header: FunctionComponent<HeaderProps> = ({showPhone = true}) => {
+export const Header: FunctionComponent<HeaderProps> = ({ showPhone = true }) => {
   return (
     <Wrapper>
       <LogoWrapper>Logo</LogoWrapper>

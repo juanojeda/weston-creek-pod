@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { HEADER_HEIGHT } from '../components/Header';
 import { Route } from '../components/Navigation';
 
 const HEADER_IMAGE = "https://images.unsplash.com/photo-1523881542461-305ab566932f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2700&q=80";
@@ -7,6 +8,7 @@ const HEADER_IMAGE = "https://images.unsplash.com/photo-1523881542461-305ab56693
 const MastheadWrapper = styled.div`
   width: 100vw;
   height: 580px;
+  padding-top: calc(${HEADER_HEIGHT} + 1rem);
   position: relative;
 
   &::after {
