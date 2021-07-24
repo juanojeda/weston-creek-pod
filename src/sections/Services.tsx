@@ -1,10 +1,11 @@
 import React from 'react';
 import { Route } from '../components/Navigation';
+import { SectionWrapper } from '../components/SectionWrapper';
 
 export const Services = () => {
   return (
-    <div id={Route.SERVICES}>
+    <SectionWrapper id={Route.SERVICES}>
       Services
-    </div>
+    </SectionWrapper>
   );
 };
