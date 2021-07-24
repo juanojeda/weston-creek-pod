@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
-import { Col, Container } from "react-awesome-styled-grid";
 import styled, { css } from "styled-components";
+import { Col, Container } from "react-awesome-styled-grid";
+import { Link } from "react-scroll";
 import { HEADER_HEIGHT } from "./Header";
 
 export enum Route {
@@ -28,7 +29,7 @@ interface LinkConfig {
 
 const NavigationContainer = styled(Container)`
   position: fixed;
-  top: calc(${HEADER_HEIGHT} + 1rem);
+  top: ${HEADER_HEIGHT};
   z-index: 1;
 `;
 
@@ -45,7 +46,7 @@ const NavigationWrapper = styled(Col).attrs({
   width: 100%;
 `;
 
-const Link = styled.a <LinkProps>`
+const NavLink = styled(Link) <LinkProps>`
   border-radius: 1.5rem;
   color: ${({ theme }) => theme.colour.background};
   display: block;
@@ -72,19 +73,19 @@ const Link = styled.a <LinkProps>`
 export const Navigation: FunctionComponent<NavigationProps> = ({ activeSection }) => {
 
   const links: LinkConfig[] = [
-    { href: `#${Route.HOME}`, text: "Home" },
-    { href: `#${Route.OUR_TEAM}`, text: "Our team" },
-    { href: `#${Route.SERVICES}`, text: "Services" },
-    { href: `#${Route.FAQS}`, text: "FAQs" },
+    { href: `${Route.HOME}`, text: "Home" },
+    { href: `${Route.OUR_TEAM}`, text: "Our team" },
+    { href: `${Route.SERVICES}`, text: "Services" },
+    { href: `${Route.FAQS}`, text: "FAQs" },
     { href: "//google.com", text: "Bookings", isExternal: true },
-    { href: `#${Route.CONTACT}`, text: "Contact us" },
+    { href: `${Route.CONTACT}`, text: "Contact us" },
   ];
 
   return (
     <NavigationContainer>
       <NavigationWrapper>
         {links.map(({ href, text, isExternal = false }) => (
-          <Link href={href} $external={isExternal}>{text}</Link>
+          <NavLink key={href} to={href} smooth duration={500} hashSpy spy $external={isExternal}>{text}</NavLink>
         ))}
       </NavigationWrapper>
     </NavigationContainer>
