@@ -2,11 +2,27 @@ import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { Telephone } from '@styled-icons/foundation';
 import { getBreakpoint } from '../utils/themeHelpers';
+import logo from "../img/logo2.png";
 
 export const HEADER_HEIGHT = "8rem";
 const INTERNAL_HEADER_HEIGHT = "7rem";
 
-const Wrapper = styled.header`
+interface HeaderProps {
+  showPhone?: boolean;
+}
+
+interface WrapperProps {
+  $transparent: boolean;
+}
+
+interface PhoneLinkProps {
+  $showPhone: boolean;
+}
+
+const Wrapper = styled.header<WrapperProps>`
+  align-items: center;
+  background: ${({ $transparent, theme }) => $transparent ? theme.colour.headerGradient : theme.colour.headerSolid};
+  box-shadow: ${({ $transparent, theme }) => $transparent ? "none" : theme.colour.shadow};
   display: flex;
   gap: .5rem;
   height: ${INTERNAL_HEADER_HEIGHT};
@@ -15,6 +31,7 @@ const Wrapper = styled.header`
   padding-top: .5rem;
   position: fixed;
   width: 100%;
+  z-index: 1;
 
   &::before {
     content: "";
@@ -32,14 +49,19 @@ const LogoWrapper = styled.a.attrs({
   href: "/"
 })`
   display: block;
-  background: #ddd;
   width: 248px;
-  height: 60px;
   flex-shrink: 1;
 `;
 
-const PhoneLink = styled.a`
+const Logo = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`;
+
+const PhoneLink = styled.a<PhoneLinkProps>`
   flex-shrink: 0;
+  visibility: ${({ $showPhone }) => $showPhone ? "visible" : "hidden"};
 
   ${getBreakpoint("md")}{
     width: 200px;
@@ -64,20 +86,16 @@ const PhoneNumber = styled.span`
   }
 `;
 
-interface HeaderProps {
-  showPhone?: boolean;
-}
-
 export const Header: FunctionComponent<HeaderProps> = ({ showPhone = true }) => {
   return (
-    <Wrapper>
-      <LogoWrapper>Logo</LogoWrapper>
-      {showPhone && <>
-        <PhoneLink href="tel:61262881234">
-          <PhoneIcon />
-          <PhoneNumber>02 6288 1234</PhoneNumber>
-        </PhoneLink>
-      </>}
+    <Wrapper $transparent={!showPhone}>
+      <LogoWrapper>
+        <Logo src={logo} alt="Weston Creek Podiatry logo" />
+      </LogoWrapper>
+      <PhoneLink href="tel:61262881234" $showPhone={showPhone}>
+        <PhoneIcon />
+        <PhoneNumber>02 6288 1234</PhoneNumber>
+      </PhoneLink>
     </Wrapper>
   );
 };

@@ -19,5 +19,12 @@ declare module "styled-components" {
     colour: {
       [key: string]: string;
     };
+    typography: {
+      [key: string]: {
+        fontSize: number;
+        lineHeight: number;
+        fontWeight: string;
+      };
+    };
   }
 }
