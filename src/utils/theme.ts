@@ -2,6 +2,13 @@ import { DefaultTheme } from "styled-components";
 
 const getRemsFromPx = (px: number): number => px / 16;
 
+const TEAL = "#0C9BAE";
+const DARK_TEAL = "#076471";
+const OFF_WHITE = "#F2F3F4";
+const WHITE = "#fff";
+const OFF_BLACK = "#3C4449";
+const BLACK = "#000";
+
 export const theme: DefaultTheme = {
   awesomegrid: {
     columns: {
@@ -20,19 +27,19 @@ export const theme: DefaultTheme = {
     }
   },
   iconSize: {
-    sm: 3,
-    md: 4
+    sm: 2.5,
+    md: 3.5
   },
   breakpoint: {
     sm: 600,
     md: 900
   },
   colour: {
-    primary: "teal",
-    secondary: "darkslategrey",
-    foreground: "black",
-    background: "white",
-    headerSolid: "#fff",
+    primary: TEAL,
+    secondary: DARK_TEAL,
+    foreground: OFF_BLACK,
+    background: OFF_WHITE,
+    headerSolid: WHITE,
     headerGradient:
       "linear-gradient(to bottom, rgba(255,255,255,.7), rgba(255,255,255,0))",
     shadow: "0 .25rem .25rem rgba(0,0,0,0.05)"
@@ -41,32 +48,32 @@ export const theme: DefaultTheme = {
     body: {
       fontSize: getRemsFromPx(16),
       lineHeight: getRemsFromPx(24),
-      fontWeight: "regular"
+      fontWeight: 400
     },
     bodyLarge: {
       fontSize: getRemsFromPx(24),
       lineHeight: getRemsFromPx(36),
-      fontWeight: "regular"
+      fontWeight: 400
     },
     h1: {
       fontSize: getRemsFromPx(56),
       lineHeight: getRemsFromPx(84),
-      fontWeight: "extraLight"
+      fontWeight: 200
     },
     h2: {
       fontSize: getRemsFromPx(32),
       lineHeight: getRemsFromPx(48),
-      fontWeight: "bold"
+      fontWeight: 700
     },
     h3: {
       fontSize: getRemsFromPx(24),
       lineHeight: getRemsFromPx(36),
-      fontWeight: "extraLight"
+      fontWeight: 200
     },
     h4: {
       fontSize: getRemsFromPx(18),
       lineHeight: getRemsFromPx(24),
-      fontWeight: "bold"
+      fontWeight: 700
     }
   }
 };

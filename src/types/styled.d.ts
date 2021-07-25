@@ -23,7 +23,7 @@ declare module "styled-components" {
       [key: string]: {
         fontSize: number;
         lineHeight: number;
-        fontWeight: string;
+        fontWeight: number;
       };
     };
   }
