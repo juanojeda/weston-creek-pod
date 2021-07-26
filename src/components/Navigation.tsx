@@ -49,10 +49,11 @@ const NavigationWrapper = styled(Col).attrs({
 const NavLink = styled(Link) <LinkProps>`
   border-radius: 1.5rem;
   color: ${({ theme }) => theme.colour.background};
+  cursor: pointer;
   display: block;
+  font-size: ${getFontSize("h4")};
   margin: .25rem 1rem;
   padding: .25rem 1rem;
-  font-size: ${getFontSize("h4")};
 
   ${({ $external }) => $external && css`
     ::after {

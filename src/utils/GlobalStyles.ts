@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   html {
     font-size: 16px;
     font-family: 'Nunito', sans-serif;
+    background: ${({ theme }) => theme.colour.background};
   }
 
   a {
