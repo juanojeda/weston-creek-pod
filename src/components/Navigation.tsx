@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { Col, Container } from "react-awesome-styled-grid";
 import { Link } from "react-scroll";
 import { HEADER_HEIGHT } from "./Header";
+import { getFontSize, getFontWeight } from "../utils/themeHelpers";
 
 export enum Route {
   HOME = "home",
@@ -51,6 +52,7 @@ const NavLink = styled(Link) <LinkProps>`
   display: block;
   margin: .25rem 1rem;
   padding: .25rem 1rem;
+  font-size: ${getFontSize("h4")};
 
   ${({ $external }) => $external && css`
     ::after {
@@ -65,7 +67,7 @@ const NavLink = styled(Link) <LinkProps>`
   `}
 
   &.active {
-    font-weight: bold;
+    font-weight: ${getFontWeight("h4")};
     background: ${({ theme }) => theme.colour.secondary};
   };
 `;

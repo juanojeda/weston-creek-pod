@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { Telephone } from '@styled-icons/foundation';
-import { getBreakpoint } from '../utils/themeHelpers';
+import { getBreakpoint, getFontLineHeight, getFontSize, getFontWeight } from '../utils/themeHelpers';
 import logo from "../img/logo2.png";
 import { Container } from 'react-awesome-styled-grid';
 
@@ -82,9 +82,9 @@ const PhoneIcon = styled(Telephone)`
 
 const PhoneNumber = styled.span`
   display: none;
-  font-size: ${({ theme }) => theme.typography.bodyLarge.fontSize}rem;
-  line-height: ${({ theme }) => theme.typography.bodyLarge.lineHeight}rem;
-  font-weight: ${({ theme }) => theme.typography.bodyLarge.fontWeight};
+  font-size: ${getFontSize("bodyLarge")};
+  line-height: ${getFontLineHeight("bodyLarge")};
+  font-weight: ${getFontWeight("bodyLarge")};
 
   ${getBreakpoint("md")}{
     display: inline;
