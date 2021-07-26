@@ -1,6 +1,11 @@
 import "styled-components";
 
 declare module "styled-components" {
+  export interface FontConfig {
+    fontSize: string;
+    lineHeight: string;
+    fontWeight: number;
+  }
   export interface DefaultTheme {
     awesomegrid: {
       columns: {
@@ -20,11 +25,7 @@ declare module "styled-components" {
       [key: string]: string;
     };
     typography: {
-      [key: string]: {
-        fontSize: number;
-        lineHeight: number;
-        fontWeight: number;
-      };
+      [key: string]: FontConfig;
     };
   }
 }

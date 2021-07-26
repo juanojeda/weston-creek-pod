@@ -1,6 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
-const getRemsFromPx = (px: number): number => px / 16;
+const getRemsFromPxRaw = (px: number): number => px / 16;
+const getRemsFromPx = (px: number): string => `${getRemsFromPxRaw(px)}rem`;
 
 const TEAL = "#0C9BAE";
 const DARK_TEAL = "#076471";
@@ -20,10 +21,10 @@ export const theme: DefaultTheme = {
     },
     breakpoints: {
       xs: 1,
-      sm: getRemsFromPx(600),
-      md: getRemsFromPx(900),
-      lg: getRemsFromPx(1200),
-      xl: getRemsFromPx(1200)
+      sm: getRemsFromPxRaw(600),
+      md: getRemsFromPxRaw(900),
+      lg: getRemsFromPxRaw(1200),
+      xl: getRemsFromPxRaw(1200)
     }
   },
   iconSize: {
