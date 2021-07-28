@@ -27,6 +27,7 @@ interface LinkConfig {
 const NavigationContainer = styled(Container)`
   position: fixed;
   top: ${HEADER_HEIGHT};
+  left: 0rem;
   z-index: 1;
 `;
 

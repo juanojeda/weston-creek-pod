@@ -8,7 +8,8 @@
       ]
     },
     "callToAction": {
-      "label": "Make an appointment"
+      "label": "Make an appointment",
+      "url":"//google.com"
     },
     "phone": {
       "label": "Call us on",
