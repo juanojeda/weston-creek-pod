@@ -1,0 +1,18 @@
+{
+  "panel": {
+    "address": {
+      "label": "Find our clinic at",
+      "body": [
+        "The Waramanga Shopping Precinct",
+        "Suite 1 23-29 Waramanga Place, Waramanga"
+      ]
+    },
+    "callToAction": {
+      "label": "Make an appointment"
+    },
+    "phone": {
+      "label": "Call us on",
+      "body": "02 6288 1234"
+    }
+  }
+}

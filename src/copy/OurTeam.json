@@ -1,0 +1,44 @@
+{
+  "title": "Our team",
+  "profiles": [
+    {
+      "image": "angela.png",
+      "name": "Angela Sonter",
+      "subtitleA": "Podiatrist",
+      "subtitleB": "B. Pod",
+      "body": [
+        "Angela is a professional with a passion for providing quality care to her patients. After moving away to study Podiatry at the University of Newcastle and then travelling the world, she has finally achieved her dream of working and living in the Weston Creek community.",
+        "Angela has gained clinical expertise working in high-risk-foot clinics in London, Melbourne and now Canberra where she has helped patients with complex foot problems and complications. Her extensive podiatric experience across both public and private health sectors means Angela can effectively manage skin and nail problems, wounds, diabetic-complications and biomechanical complaints.",
+        "Angela is still balancing her role at the Canberra Hospital with her clinical work at Weston Creek Podiatry. Running around after two young children of her own at home, Angela understands the value (and necessity) of having both feet working optimally. "
+      ]
+    },
+    {
+      "image": "jennifer.png",
+      "name": "Jennifer Sonter",
+      "subtitleA": "Podiatrist",
+      "subtitleB": "PhD (Podiatry), B. H. Sc (Hons I), B. Pod, B. Sc",
+      "body": [
+        "Jennifer is a Weston Creek local having grown up in Waramanga before moving to study Podiatry at the University of Newcastle. Now after working as a podiatrist, lecturer and researcher in Sydney she has brought her knowledge and skills back home to help the Canberra community.",
+        "She has a specialist interest in how diabetes affects the feet and completed her Honours degree and Doctorate investigating blood flow in the feet of people with diabetes. Jennifer is excited about the role podiatrists play in improving quality of life for their patients. From painful in-growing nails and skin problems to heel pain and musculoskeletal conditions, Jennifer has more than 10 years of experience helping patients improve how they move.",
+        "Jennifer is passionate about podiatry and the growth of the profession through research and education. Unable to stop studying, Jennifer has recently started a Graduate Certificate in Public Health here in Canberra while juggling two energetic youngsters. If she had any spare time she would sit still."
+      ]
+    },
+    {
+      "image": "fiona.png",
+      "name": "Fiona",
+      "subtitleA": "Receptionist",
+      "body": [
+        "Fiona is the professional and caring face of Weston Creek Podiatry. Her love of helping people and forming relationships ensures our patients have an exceptional experience from beginning to end. Always ready to help, Fiona loves meeting new people and solving problems.",
+        "One day hoping to help the smallest people in Weston Creek, Fiona is studying Primary Teaching at the University of Canberra when not helping our team."
+      ]
+    },
+    {
+      "image": "heather.png",
+      "name": "Heather",
+      "subtitleA": "Receptionist",
+      "body": [
+        "Born in the UK, Heather moved to Canberra more than 20 years ago and will never leave. With a background in aged and community nursing, Heather brings a kindness and compassion to her work. She is a born communicator who loves to hear people’s stories and is ready to help in person or on the phone."
+      ]
+    }
+  ]
+}
