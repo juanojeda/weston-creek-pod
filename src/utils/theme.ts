@@ -28,8 +28,9 @@ export const theme: DefaultTheme = {
     }
   },
   iconSize: {
-    sm: 2.5,
-    md: 3.5
+    xs: 1,
+    sm: 2,
+    md: 3
   },
   breakpoint: {
     sm: 600,

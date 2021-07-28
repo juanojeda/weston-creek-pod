@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import styled, { css } from "styled-components";
 import { Col, Container } from "react-awesome-styled-grid";
 import { Link } from "react-scroll";
+import { ExternalLinkAlt } from '@styled-icons/fa-solid';
 import { HEADER_HEIGHT } from "./Header";
 import { getFontSize, getFontWeight } from "../utils/themeHelpers";
 
@@ -15,10 +16,6 @@ export enum Route {
 
 interface NavigationProps {
   activeSection?: Route;
-};
-
-interface LinkProps {
-  readonly $external?: boolean;
 };
 
 interface LinkConfig {
@@ -46,7 +43,14 @@ const NavigationWrapper = styled(Col).attrs({
   width: 100%;
 `;
 
-const NavLink = styled(Link) <LinkProps>`
+const ExternalLink = styled(ExternalLinkAlt)`
+  display: inline-block;
+  vertical-align: top;
+  margin-left: .25em;
+  width: ${({ theme }) => theme.iconSize.xs}rem;
+`;
+
+const NavLink = styled(Link)`
   border-radius: 1.5rem;
   color: ${({ theme }) => theme.colour.background};
   cursor: pointer;
@@ -54,18 +58,6 @@ const NavLink = styled(Link) <LinkProps>`
   font-size: ${getFontSize("h4")};
   margin: .25rem 1rem;
   padding: .25rem 1rem;
-
-  ${({ $external }) => $external && css`
-    ::after {
-      content: "";
-      display: inline-block;
-      outline: 1px solid red;
-      width: 1rem;
-      height: 1rem;
-      margin-left: .5rem;
-      vertical-align: baseline;
-    }
-  `}
 
   &.active {
     font-weight: ${getFontWeight("h4")};
@@ -88,7 +80,9 @@ export const Navigation: FunctionComponent<NavigationProps> = ({ activeSection }
     <NavigationContainer>
       <NavigationWrapper>
         {links.map(({ href, text, isExternal = false }) => (
-          <NavLink key={href} to={href} smooth duration={500} hashSpy spy $external={isExternal}>{text}</NavLink>
+          <NavLink key={href} to={href} smooth duration={500} hashSpy spy >{text}
+            {isExternal && <ExternalLink />}
+          </NavLink>
         ))}
       </NavigationWrapper>
     </NavigationContainer>

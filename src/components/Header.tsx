@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { Telephone } from '@styled-icons/foundation';
+import { PhoneAlt } from '@styled-icons/fa-solid';
 import { getBreakpoint, getFontLineHeight, getFontSize, getFontWeight } from '../utils/themeHelpers';
 import logo from "../img/logo2.png";
 import { Container } from 'react-awesome-styled-grid';
@@ -70,8 +70,8 @@ const PhoneLink = styled.a<PhoneLinkProps>`
   visibility: ${({ $showPhone }) => $showPhone ? "visible" : "hidden"};
 `;
 
-const PhoneIcon = styled(Telephone)`
-  vertical-align: bottom;
+const PhoneIcon = styled(PhoneAlt)`
+  vertical-align: top;
   width: ${({ theme }) => theme.iconSize.md}rem;
 
   ${getBreakpoint("md")}{
